@@ -89,7 +89,11 @@ max-width: 140px;
     color: white;
 }
 
-
+.delt{
+    color: red;
+    cursor: pointer;
+    margin-left: 40px;
+}
 
 
 .left-nav .menu{

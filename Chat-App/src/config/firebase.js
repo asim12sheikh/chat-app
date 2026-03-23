@@ -3,13 +3,16 @@ import { createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signIn
 import { collection, doc, getDoc, getDocs, getFirestore, query, setDoc, where } from "firebase/firestore"
 import { toast } from "react-toastify"
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDcRMJxrlGPQDRVshn_Q6PPM_SuvEBmla0",
-  authDomain: "chat-app-p-ad5f4.firebaseapp.com",
-  projectId: "chat-app-p-ad5f4",
-  storageBucket: "chat-app-p-ad5f4.firebasestorage.app",
-  messagingSenderId: "472846820422",
-  appId: "1:472846820422:web:9468647d7794128b9c1647"
+  apiKey:import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId:import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
+  
+  
 };
 
 // Initialize Firebase

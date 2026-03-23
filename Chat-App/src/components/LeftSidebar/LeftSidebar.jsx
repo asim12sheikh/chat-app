@@ -6,6 +6,7 @@ import { arrayUnion, collection, doc, getDoc, getDocs, query, serverTimestamp, s
 import { AppContext } from '../../context/AppContext.jsx'
 import { db } from '../../config/firebase.js'
 import { toast } from 'react-toastify'
+import {FaTrash} from "react-icons/fa"
 
 const LeftSidebar = () => {
 
@@ -191,11 +192,11 @@ const LeftSidebar = () => {
             <p>{item.userData.name}</p>
             <span>{item.lastMessage}</span>
           </div>
-           <button onClick={(e)=> {
+           <button className='delt' onClick={(e)=> {
             e.stopPropagation();
             handleDeleteChat(item)
            }}
-            >DEL</button>
+            ><FaTrash/></button>
            </div>
 
           
