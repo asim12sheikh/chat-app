@@ -182,12 +182,12 @@ const LeftSidebar = () => {
         {showSearch && user 
         ?
          <div onClick={addChat} className="friends add-user">
-          <img src={user.avatar} alt="" />
+          <img src={user.avatar === "" ? null : user.avatar} alt="" />
           <p>{user.name}</p>
          </div> 
          : chatData.map((item,index) => (
           <div onClick={()=>setChat(item)} key={index} className={`friends ${item.messageSeen || item.messageId === messagesId ? "" : "border"}`}>
-          <img src={item.userData.avatar} alt="" />
+          <img src={item.userData.avatar === "" ? null : item.userData.avatar} alt="" />
           <div>
             <p>{item.userData.name}</p>
             <span>{item.lastMessage}</span>
@@ -196,7 +196,7 @@ const LeftSidebar = () => {
             e.stopPropagation();
             handleDeleteChat(item)
            }}
-            ><FaTrash/></button>
+            ><FaTrash/></button>      
            </div>
 
           

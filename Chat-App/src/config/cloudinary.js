@@ -3,7 +3,7 @@ export const uploadImage = async (file) => {
     if (!file) return null;
 
     const cloudName = import.meta.env.VITE_CLOUD_NAME;
-    const uploadPreset = import.meta.env.VITE_UPLOAD_PERSET;
+    const uploadPreset = import.meta.env.VITE_UPLOAD_PRESET;
         
     
    const formData = new FormData()

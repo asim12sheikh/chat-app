@@ -84,14 +84,14 @@ const ProfileUpdate = () => {
       <h3>Profile Details</h3>
       <label htmlFor="avatar">
         <input onChange={(e)=>setImage(e.target.files[0])} type="file" id="avatar" accept='.jpg,.png,.jpeg' hidden/>
-        <img src={image? URL.createObjectURL(image) : prevImage} alt="" />
+        <img src={image instanceof File ? URL.createObjectURL(image) : prevImage || null} alt="" />
         Upload Profile Image
       </label>
       <input onChange={(e)=>setName(e.target.value)} value={name} type="text" placeholder='Enter Your Name'  required/>
       <textarea onChange={(e)=>setBio(e.target.value)} value={bio} placeholder='Enter Profile Bio' required></textarea>
       <button type="submit">Save</button>
      </form>
-     <img className='profile-pic' src={image ? URL.createObjectURL(image) : prevImage ? prevImage : assets.logo_icon} alt="" />
+     <img className='profile-pic' src={image instanceof File ? URL.createObjectURL(image) : prevImage ||  assets.logo_icon} alt="" />
       </div>
     </div>
   )

@@ -145,7 +145,7 @@ const ChatBox = () => {
   return chatUser ? (
     <div className={`chat-box ${chatVisible ? "" : "hidden"}`}>
       <div className="chat-content">
-        <img src={chatUser?.userData?.avatar} alt="" />
+        <img src={chatUser?.userData?.avatar || "/default-avatar.png"} alt="" />
         <p>{chatUser?.userData?.name} {Date.now()-chatUser?.userData?.lastSeen <= 70000 ? <img className='dot' src={assets.green_dot} alt="" /> : null } </p>
        <img onClick={()=>setShowModal(true)} src={assets.help_icon} className='help' alt="" />
        <img onClick={()=>setChatVisible(false)} src={assets.arrow_icon} className='arrow' alt="" />
@@ -156,7 +156,7 @@ const ChatBox = () => {
         {messages.map((msg,index)=>(
       <div key={index} className={msg.sId === userData.id ? "s-msg" : "r-msg"}>
         {msg["image"]
-        ? <img className='msg-img' src={msg.image} alt="" />
+        ? <img className='msg-img' src={msg.image || null} alt="" />
         : <p className='msg'>{msg.text}</p>
         }
           <div>

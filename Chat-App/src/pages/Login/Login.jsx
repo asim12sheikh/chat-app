@@ -49,6 +49,25 @@ const Login = () => {
        
        </div>
       </form>
+      <div className="demo-section">
+  <h3>Demo Accounts</h3>
+
+  <div className="demo-user">
+    <p><strong>User 1:</strong></p>
+    <p>Email: demo@gmail.com</p>
+    <p>Password: 123456</p>
+  </div>
+
+  <div className="demo-user">
+    <p><strong>User 2:</strong></p>
+    <p>Email: demo2@gmail.com</p>
+    <p>Password: 123456</p>
+  </div>
+
+  <p className="demo-note">
+    Open in two tabs to test real-time chat.
+  </p>
+</div>
     </div>
   )
 }
