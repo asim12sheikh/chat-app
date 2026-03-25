@@ -49,23 +49,21 @@ const Login = () => {
        
        </div>
       </form>
-      <div className="demo-section">
+     <div className="demo-box">
   <h3>Demo Accounts</h3>
 
-  <div className="demo-user">
-    <p><strong>User 1:</strong></p>
-    <p>Email: demo@gmail.com</p>
-    <p>Password: 123456</p>
-  </div>
+  <p>
+    <strong>User 1:</strong><br />
+    demo@gmail.com / 123456
+  </p>
 
-  <div className="demo-user">
-    <p><strong>User 2:</strong></p>
-    <p>Email: demo2@gmail.com</p>
-    <p>Password: 123456</p>
-  </div>
+  <p>
+    <strong>User 2:</strong><br />
+    demo2@gmail.com / 123456
+  </p>
 
-  <p className="demo-note">
-    Open in two tabs to test real-time chat.
+  <p className="note">
+    Open in 2 tabs to test real-time chat.
   </p>
 </div>
     </div>
